@@ -1,0 +1,67 @@
+{
+  "name": "device-preview",
+  "displayName": "Device Preview",
+  "description": "50+ cihazda web sayfanızı önizleyin - iPhone, Samsung, Pixel, Xiaomi, iPad ve daha fazlası",
+  "version": "1.0.0",
+  "publisher": "your-publisher-name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/device-preview"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "mobile",
+    "preview",
+    "device",
+    "responsive",
+    "phone",
+    "tablet",
+    "iphone",
+    "samsung"
+  ],
+  "icon": "images/icon.png",
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "devicePreview.openPreview",
+        "title": "Device Preview: Cihaz Önizleme",
+        "icon": "$(device-mobile)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "devicePreview.openPreview",
+        "key": "ctrl+alt+d",
+        "mac": "cmd+alt+d"
+      }
+    ],
+    "configuration": {
+      "title": "Device Preview",
+      "properties": {
+        "devicePreview.defaultUrl": {
+          "type": "string",
+          "default": "",
+          "description": "Varsayılan URL (boş bırakılırsa aktif dosyanın bulunduğu projenin dev sunucusunu arar)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "eslint": "^8.50.0"
+  }
+}

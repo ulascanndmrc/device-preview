@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cihaz Önizleme</title>
+  <link rel="stylesheet" href="{{styleUri}}">
+</head>
+<body>
+  <h1>📱 Device Preview</h1>
+  <p class="subtitle">50+ cihazda web sayfanızı test edin</p>
+
+  <div class="url-bar">
+    <input type="text" id="urlInput" value="{{previewUrl}}" placeholder="http://localhost:5173">
+    <button onclick="loadUrl()">Yükle</button>
+  </div>
+
+  <div class="controls" id="filters">
+    <button class="active" data-filter="all">Tümü</button>
+    <button data-filter="iphone">iPhone</button>
+    <button data-filter="samsung">Samsung</button>
+    <button data-filter="other">Android</button>
+    <button data-filter="tablet">Tablet</button>
+  </div>
+
+  <div class="grid" id="deviceGrid"></div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2><span id="modalName"></span> <span class="dim" id="modalDim"></span></h2>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-frame" id="modalFrame">
+        <div class="notch"></div>
+        <iframe id="modalIframe" frameborder="0"></iframe>
+      </div>
+      <div class="modal-nav">
+        <button onclick="prevDevice()">◀ Önceki</button>
+        <button id="rotateBtn" onclick="rotateDevice()">🔄 Döndür</button>
+        <button onclick="nextDevice()">Sonraki ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{scriptUri}}"></script>
+</body>
+</html>
