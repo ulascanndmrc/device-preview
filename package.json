@@ -3,11 +3,11 @@
   "displayName": "Device Preview",
   "description": "50+ cihazda web sayfanızı önizleyin - iPhone, Samsung, Pixel, Xiaomi, iPad ve daha fazlası",
   "version": "1.0.0",
-  "publisher": "your-publisher-name",
+  "publisher": "ulascanndmrc",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/device-preview"
+    "url": "https://github.com/ulascanndmrc/device-preview"
   },
   "engines": {
     "vscode": "^1.85.0"
@@ -26,7 +26,7 @@
     "iphone",
     "samsung"
   ],
-  "icon": "images/icon.png",
+
   "activationEvents": [],
   "main": "./src/extension.js",
   "contributes": {
